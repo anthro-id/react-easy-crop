@@ -800,13 +800,15 @@ class Cropper extends React.Component<CropperProps, State> {
         {image ? (
           <img
             alt=""
-            className={classNames(
-              'reactEasyCrop_Image',
-              objectFit === 'contain' && 'reactEasyCrop_Contain',
-              objectFit === 'horizontal-cover' && 'reactEasyCrop_Cover_Horizontal',
-              objectFit === 'vertical-cover' && 'reactEasyCrop_Cover_Vertical',
-              mediaClassName
-            )}
+            className={
+              classNames(
+                'reactEasyCrop_Image',
+                // objectFit === 'contain' && 'reactEasyCrop_Contain',
+                // objectFit === 'horizontal-cover' && 'reactEasyCrop_Cover_Horizontal',
+                // objectFit === 'vertical-cover' && 'reactEasyCrop_Cover_Vertical',
+                mediaClassName
+              )
+            }
             {...(mediaProps as React.ImgHTMLAttributes<HTMLElement>)}
             src={image}
             ref={this.imageRef}
